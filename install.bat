@@ -19,25 +19,22 @@ set KEY_OU=ICT
 set PKCS11_MODULE_PATH=changeme
 set PKCS11_PIN=1234
 
+vars
 clean-all.bat
-
 build-ca.bat
 
 build-key-server.bat server
-build-key.bat mike-laptop
-
+build-key.bat client
 build-dh.bat
 
-ca.crt
-dh2048.pem
-server.crt
-server.key
-
 copy "C:\Program Files\OpenVPN\easy-rsa\keys\ca.crt" "C:\Program Files\OpenVPN\config"
-copy "C:\Program Files\OpenVPN\easy-rsa\keys\dh2048.pem" "C:\Program Files\OpenVPN\config"
 copy "C:\Program Files\OpenVPN\easy-rsa\keys\server.crt" "C:\Program Files\OpenVPN\config"
 copy "C:\Program Files\OpenVPN\easy-rsa\keys\server.key" "C:\Program Files\OpenVPN\config"
 
+copy "C:\Program Files\OpenVPN\easy-rsa\keys\client.crt" "C:\Program Files\OpenVPN\config"
+copy "C:\Program Files\OpenVPN\easy-rsa\keys\client.key" "C:\Program Files\OpenVPN\config"
+
+copy "C:\Program Files\OpenVPN\easy-rsa\keys\dh2048.pem" "C:\Program Files\OpenVPN\config"
 copy "C:\Program Files\OpenVPN\sample-config\server.ovpn" "C:\Program Files\OpenVPN\config"
 copy "C:\Program Files\OpenVPN\sample-config\client.ovpn" "C:\Program Files\OpenVPN\config"
 
@@ -59,8 +56,8 @@ remote my-server-1 1194
 remote vpn.mydomain.com 1194
 
 ca "C:\\Program Files\\OpenVPN\\config\\ca.crt"
-cert "C:\\Program Files\\OpenVPN\\config\\server.crt"
-key "C:\\Program Files\\OpenVPN\\config\\server.key"
+cert "C:\\Program Files\\OpenVPN\\config\\client.crt"
+key "C:\\Program Files\\OpenVPN\\config\\client.key"
 
 #tls-auth ta.key
 
