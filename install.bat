@@ -48,6 +48,7 @@ key "C:\\Program Files\\OpenVPN\\config\\server.key" # This file should be kept 
 dh "C:\\Program Files\\OpenVPN\\config\\dh2048.pem"
 
 #tls-auth ta.key
+#explicit-exit-notify 1
 
 notepad "C:\Program Files\OpenVPN\config\client.ovpn"
 "C:\Program Files (x86)\Notepad++\notepad++.exe" "C:\Program Files\OpenVPN\config\client.ovpn"
