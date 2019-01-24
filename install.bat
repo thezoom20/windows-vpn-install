@@ -36,6 +36,7 @@ key "C:\\Program Files\\OpenVPN\\config\\server.key" # This file should be kept 
 
 dh "C:\\Program Files\\OpenVPN\\config\\dh2048.pem"
 
+#tls-auth ta.key
 
 notepad "C:\Program Files\OpenVPN\config\client.ovpn"
 "C:\Program Files (x86)\Notepad++\notepad++.exe" "C:\Program Files\OpenVPN\config\client.ovpn"
@@ -46,5 +47,7 @@ remote vpn.mydomain.com 1194
 ca "C:\\Program Files\\OpenVPN\\config\\ca.crt"
 cert "C:\\Program Files\\OpenVPN\\config\\server.crt"
 key "C:\\Program Files\\OpenVPN\\config\\server.key"
+
+#tls-auth ta.key
 
 "C:\Program Files\OpenVPN\bin\openvpn-gui.exe"
