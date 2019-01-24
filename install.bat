@@ -15,16 +15,32 @@ build-key-server.bat server
 build-dh.bat
 
 ca.crt
-dh1024.pem
+dh2048.pem
 server.crt
 server.key
 
-copy C:\Program Files\OpenVPN\easy-rsa\keys\ca.crt C:\Program Files\OpenVPN\config
-copy C:\Program Files\OpenVPN\easy-rsa\keys\dh1024.pem C:\Program Files\OpenVPN\config
-copy C:\Program Files\OpenVPN\easy-rsa\keys\server.crt C:\Program Files\OpenVPN\config
-copy C:\Program Files\OpenVPN\easy-rsa\keys\server.key C:\Program Files\OpenVPN\config
+copy "C:\Program Files\OpenVPN\easy-rsa\keys\ca.crt" "C:\Program Files\OpenVPN\config"
+copy "C:\Program Files\OpenVPN\easy-rsa\keys\dh2048.pem" "C:\Program Files\OpenVPN\config"
+copy "C:\Program Files\OpenVPN\easy-rsa\keys\server.crt" "C:\Program Files\OpenVPN\config"
+copy "C:\Program Files\OpenVPN\easy-rsa\keys\server.key" "C:\Program Files\OpenVPN\config"
 
 copy "C:\Program Files\OpenVPN\sample-config\server.ovpn" "C:\Program Files\OpenVPN\config"
 copy "C:\Program Files\OpenVPN\sample-config\client.ovpn" "C:\Program Files\OpenVPN\config"
 
 notepad "C:\Program Files\OpenVPN\config\server.ovpn"
+"C:\Program Files (x86)\Notepad++\notepad++.exe" "C:\Program Files\OpenVPN\config\server.ovpn"
+
+ca "C:\\Program Files\\OpenVPN\\config\\ca.crt"
+cert "C:\\Program Files\\OpenVPN\\config\\server.crt"
+key "C:\\Program Files\\OpenVPN\\config\\server.key" # This file should be kept secret
+
+dh "C:\\Program Files\\OpenVPN\\config\\dh1024.pem"
+
+
+notepad "C:\Program Files\OpenVPN\config\client.ovpn"
+"C:\Program Files (x86)\Notepad++\notepad++.exe" "C:\Program Files\OpenVPN\config\client.ovpn"
+
+remote my-server-1 1194
+remote vpn.mydomain.com 1194
+
+"C:\Program Files\OpenVPN\bin\openvpn-gui.exe"
