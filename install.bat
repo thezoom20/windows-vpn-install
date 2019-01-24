@@ -6,8 +6,7 @@ cd "C:\Program Files\OpenVPN\easy-rsa"
 init-config.bat
 
 cd "C:\Program Files\OpenVPN\easy-rsa"
-"C:\Program Files (x86)\Notepad++\notepad++.exe" "C:\Program Files\OpenVPN\config\vars.bat"
-vars.bat
+"C:\Program Files (x86)\Notepad++\notepad++.exe" "C:\Program Files\OpenVPN\easy-rsa\vars.bat"
 
 set KEY_COUNTRY=US
 set KEY_PROVINCE=CA
