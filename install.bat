@@ -34,7 +34,7 @@ ca "C:\\Program Files\\OpenVPN\\config\\ca.crt"
 cert "C:\\Program Files\\OpenVPN\\config\\server.crt"
 key "C:\\Program Files\\OpenVPN\\config\\server.key" # This file should be kept secret
 
-dh "C:\\Program Files\\OpenVPN\\config\\dh1024.pem"
+dh "C:\\Program Files\\OpenVPN\\config\\dh2048.pem"
 
 
 notepad "C:\Program Files\OpenVPN\config\client.ovpn"
