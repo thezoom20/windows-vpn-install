@@ -24,6 +24,8 @@ clean-all.bat
 build-ca.bat
 
 build-key-server.bat server
+build-key.bat mike-laptop
+
 build-dh.bat
 
 ca.crt
