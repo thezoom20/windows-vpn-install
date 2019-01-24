@@ -6,7 +6,20 @@ cd "C:\Program Files\OpenVPN\easy-rsa"
 init-config.bat
 
 cd "C:\Program Files\OpenVPN\easy-rsa"
+"C:\Program Files (x86)\Notepad++\notepad++.exe" "C:\Program Files\OpenVPN\config\vars.bat"
 vars.bat
+
+set KEY_COUNTRY=US
+set KEY_PROVINCE=CA
+set KEY_CITY=SanFrancisco
+set KEY_ORG=OpenVPN
+set KEY_EMAIL=mail@host.domain
+set KEY_CN=Unique/machine name
+set KEY_NAME=Use same as the Common Name!
+set KEY_OU=ICT
+set PKCS11_MODULE_PATH=changeme
+set PKCS11_PIN=1234
+
 clean-all.bat
 
 build-ca.bat
